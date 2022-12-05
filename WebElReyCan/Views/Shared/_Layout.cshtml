@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+  
+</head>
+<body>
+    <div class="container">
+        <header class="headerContainer">
+            <section class="banner">
+                <h3>Banner</h3>
+            </section>
+            <div class="designContainer">
+                <section class="sectionLogo">
+                    <h3>Logo</h3>
+                </section>
+                <section>
+                    <h3 class="sectionLogin">Login</h3>
+                </section>
+            </div>
+
+        </header>
+
+        <nav>
+            @Html.ActionLink("Nuevo Turno", "Create", "Turno")
+            @Html.ActionLink("Turnos de Hoy", "ListarPorFecha", "Turno")
+            @Html.ActionLink("Todos los Turnos", "Index", "Turno")
+            @Html.ActionLink("Home", "Index", "Home")
+        </nav>
+        <div class="mainContainer">
+            <aside>
+                @if (IsSectionDefined("Aside"))
+                {
+                    @RenderSection("Aside")
+                }
+                else
+                {
+                    <a href="https://es.wikipedia.org/wiki/Peluquero_canino">Peluquero Canino</a>
+                }
+            </aside>
+            <main>
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer>
+            <h3>elreycan@gmail.com</h3>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿@model WebElReyCan.Models.Turno
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h2>Detalle</h2>
+<fieldset>
+    <legend>Detalles del Turno @Model.Fecha</legend>
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Raza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreDuenio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Raza)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.NombreDuenio)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Telefono)
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Volver al listado", "Index", "Turno")
+</p>
+
+

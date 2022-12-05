@@ -1,0 +1,48 @@
+﻿@model WebElReyCan.Models.Turno
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Agregar un nuevo empleado</h1>
+@using (Html.BeginForm("Create", "Turno", FormMethod.Post))
+{
+    <p>
+        @Html.LabelFor(model => model.Fecha)
+        @Html.EditorFor(model => model.Fecha)
+        @Html.ValidationMessageFor(model => model.Fecha)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Nombre)
+        @Html.EditorFor(model => model.Nombre)
+        @Html.ValidationMessageFor(model => model.Nombre)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Raza)
+        @Html.EditorFor(model => model.Raza)
+        @Html.ValidationMessageFor(model => model.Raza)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Edad)
+        @Html.EditorFor(model => model.Edad)
+        @Html.ValidationMessageFor(model => model.Edad)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.NombreDuenio)
+        @Html.EditorFor(model => model.NombreDuenio)
+        @Html.ValidationMessageFor(model => model.NombreDuenio)
+    </p>
+    <p>
+        @Html.LabelFor(model => model.Telefono)
+        @Html.EditorFor(model => model.Telefono)
+        @Html.ValidationMessageFor(model => model.Telefono)
+    </p>
+
+
+    <input type="Submit" value="Agregar" />
+
+    @Html.ActionLink("Volver al listado", "Index", "Turno")
+}

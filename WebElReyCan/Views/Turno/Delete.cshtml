@@ -1,0 +1,31 @@
+﻿@model WebElReyCan.Models.Turno
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@Model.Fecha</h2>
+<p>Desea eliminar este Turno?</p>
+
+@using (Html.BeginForm("Delete", "Empleado", FormMethod.Post))
+{
+        <div>
+            <spam>@Html.DisplayNameFor(model => model.Fecha)</spam>
+            <spam>@Html.DisplayFor(model => model.Fecha)</spam>
+            <spam>@Html.DisplayNameFor(model => model.Nombre)</spam>
+            <spam>@Html.DisplayFor(model => model.Nombre)</spam>
+            <spam>@Html.DisplayNameFor(model => model.Raza)</spam>
+            <spam>@Html.DisplayFor(model => model.Raza)</spam>
+            <spam>@Html.DisplayNameFor(model => model.Edad)</spam>
+            <spam>@Html.DisplayFor(model => model.Edad)</spam>
+            <spam>@Html.DisplayNameFor(model => model.NombreDuenio)</spam>
+            <spam>@Html.DisplayFor(model => model.NombreDuenio)</spam>
+            <spam>@Html.DisplayNameFor(model => model.Telefono)</spam>
+            <spam>@Html.DisplayFor(model => model.Telefono)</spam>
+        </div>
+        <input type="submit" value="ELIMINAR " />
+}
+
+<p>
+    @Html.ActionLink("Volver al listado", "Index", "Turno")
+</p>
+

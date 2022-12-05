@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WebElReyCan.Models.Turno>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Lista de Turnos</h1>
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Fecha)</th>
+        <th>@Html.DisplayNameFor(m => m.Nombre)</th>
+        <th>@Html.DisplayNameFor(m => m.Raza)</th>
+        <th>@Html.DisplayNameFor(m => m.Edad)</th>
+        <th>@Html.DisplayNameFor(m => m.NombreDuenio)</th>
+        <th>@Html.DisplayNameFor(m => m.Telefono)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.Fecha)</td>
+            <td>@Html.DisplayFor(m => item.Nombre)</td>
+            <td>@Html.DisplayFor(m => item.Raza)</td>
+            <td>@Html.DisplayFor(m => item.Edad)</td>
+            <td>@Html.DisplayFor(m => item.NombreDuenio)</td>
+            <td>@Html.DisplayFor(m => item.Telefono)</td>
+
+            <td>@Html.ActionLink("Detalle", "Detalle", new { id = item.TurnoId })</td>
+            <td>@Html.ActionLink("Eliminar", "Delete", new { id = item.TurnoId })</td>
+
+        </tr>
+    }
+
+</table>
+<div class="agregar">
+    <p>@Html.ActionLink("Agregar nuevo Turno", "Create", "Turno")</p>
+    <p>@Html.ActionLink("Volver al inicio", "Index", "Home")</p>
+</div>
